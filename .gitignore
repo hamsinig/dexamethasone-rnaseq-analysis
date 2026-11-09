@@ -1,0 +1,41 @@
+# Raw sequencing data
+*.fastq
+*.fastq.gz
+*.fq
+*.fq.gz
+
+# Alignment files
+*.bam
+*.bai
+*.sam
+*.cram
+*.crai
+
+# Reference genome files
+*.fa
+*.fasta
+*.fai
+*.gtf
+*.gff
+
+# Large intermediate files
+*.bed
+*.bigWig
+
+# R and Python temporary files
+.Rhistory
+.RData
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Environment directories
+.venv/
+venv/
+conda_env/
+
+# macOS
+.DS_Store
+
+# Logs
+*.log
