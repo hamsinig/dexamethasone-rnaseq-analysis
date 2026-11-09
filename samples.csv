@@ -1,0 +1,9 @@
+sample_id,srr_accession,cell_line,treatment
+control_1,SRR1039508,N61311,untreated
+dex_1,SRR1039509,N61311,dexamethasone
+control_2,SRR1039512,N052611,untreated
+dex_2,SRR1039513,N052611,dexamethasone
+control_3,SRR1039516,N080611,untreated
+dex_3,SRR1039517,N080611,dexamethasone
+control_4,SRR1039520,N061011,untreated
+dex_4,SRR1039521,N061011,dexamethasone
