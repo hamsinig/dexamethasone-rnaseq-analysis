@@ -9,8 +9,6 @@ import matplotlib.pyplot as plt
 from matplotlib.backends.backend_pdf import PdfPages
 
 
-SAMPLE = "SRR1039508"
-
 MODULES = [
     "Basic Statistics",
     "Per base sequence quality",
@@ -30,7 +28,6 @@ def extract_fastqc(zip_path):
     """Extract FastQC modules, statuses and tabular data."""
 
     with zipfile.ZipFile(zip_path, "r") as archive:
-
         data_file = next(
             name for name in archive.namelist()
             if name.endswith("fastqc_data.txt")
@@ -94,13 +91,15 @@ def plot_quality(ax, df):
     )
 
     ax.plot(
-        x, df["Mean"],
+        x,
+        df["Mean"],
         label="Mean",
         linewidth=2
     )
 
     ax.plot(
-        x, df["Median"],
+        x,
+        df["Median"],
         label="Median",
         linestyle="--"
     )
@@ -126,7 +125,6 @@ def plot_quality(ax, df):
 def plot_tile_quality(ax, df):
     """Plot per-tile sequence quality as a heatmap."""
 
-    # FastQC uses '#Tile' as the first column name.
     tile_column = (
         "#Tile" if "#Tile" in df.columns else "Tile"
     )
@@ -161,7 +159,8 @@ def plot_table(ax, df):
 
     if df.empty:
         ax.text(
-            0.5, 0.5,
+            0.5,
+            0.5,
             "No data available",
             ha="center",
             va="center"
@@ -192,7 +191,8 @@ def plot_generic(ax, df):
 
     if df.empty or len(df.columns) < 2:
         ax.text(
-            0.5, 0.5,
+            0.5,
+            0.5,
             "No graph data available",
             ha="center",
             va="center"
@@ -222,7 +222,8 @@ def plot_generic(ax, df):
 
     if not plotted:
         ax.text(
-            0.5, 0.5,
+            0.5,
+            0.5,
             "No numeric data available",
             ha="center",
             va="center"
@@ -247,7 +248,8 @@ def draw_module(ax, module_name, module):
 
     if module is None:
         ax.text(
-            0.5, 0.5,
+            0.5,
+            0.5,
             "Module not available",
             ha="center",
             va="center"
@@ -258,7 +260,8 @@ def draw_module(ax, module_name, module):
 
     if df.empty:
         ax.text(
-            0.5, 0.5,
+            0.5,
+            0.5,
             "No data available",
             ha="center",
             va="center"
@@ -283,7 +286,8 @@ def draw_module(ax, module_name, module):
     ax.grid(alpha=0.2)
 
 
-def create_comparison(raw_dir, trimmed_dir, output_dir):
+def create_comparison(sample, raw_dir, trimmed_dir, output_dir):
+    """Create a PDF comparing raw and trimmed FastQC reports."""
 
     output_dir.mkdir(
         parents=True,
@@ -292,7 +296,7 @@ def create_comparison(raw_dir, trimmed_dir, output_dir):
 
     pdf_path = (
         output_dir /
-        f"{SAMPLE}_full_fastqc_comparison.pdf"
+        f"{sample}_full_fastqc_comparison.pdf"
     )
 
     with PdfPages(pdf_path) as pdf:
@@ -301,12 +305,12 @@ def create_comparison(raw_dir, trimmed_dir, output_dir):
 
             raw_zip = (
                 raw_dir /
-                f"{SAMPLE}_{read}_fastqc.zip"
+                f"{sample}_{read}_fastqc.zip"
             )
 
             trimmed_zip = (
                 trimmed_dir /
-                f"{SAMPLE}_{read}_fastqc.zip"
+                f"{sample}_{read}_fastqc.zip"
             )
 
             if not raw_zip.exists():
@@ -327,7 +331,8 @@ def create_comparison(raw_dir, trimmed_dir, output_dir):
             for module_name in MODULES:
 
                 fig, axes = plt.subplots(
-                    1, 2,
+                    1,
+                    2,
                     figsize=(16, 7)
                 )
 
@@ -356,7 +361,7 @@ def create_comparison(raw_dir, trimmed_dir, output_dir):
                     )
 
                 fig.suptitle(
-                    f"{SAMPLE} | Read {read} | {module_name}",
+                    f"{sample} | Read {read} | {module_name}",
                     fontsize=14
                 )
 
@@ -385,6 +390,12 @@ def main():
     )
 
     parser.add_argument(
+        "--sample",
+        required=True,
+        help="Sample accession, e.g. SRR1039508"
+    )
+
+    parser.add_argument(
         "--raw",
         required=True,
         help="Directory containing raw FastQC ZIP files"
@@ -405,6 +416,7 @@ def main():
     args = parser.parse_args()
 
     create_comparison(
+        args.sample,
         Path(args.raw),
         Path(args.trimmed),
         Path(args.output)
