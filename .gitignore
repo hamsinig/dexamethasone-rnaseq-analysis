@@ -1,8 +1,10 @@
-# Raw sequencing data
+cat > .gitignore <<'EOF'
+# Large sequencing data
 *.fastq
 *.fastq.gz
 *.fq
 *.fq.gz
+*.sra
 
 # Alignment files
 *.bam
@@ -11,7 +13,7 @@
 *.cram
 *.crai
 
-# Reference genome files
+# Reference genome and annotation
 *.fa
 *.fasta
 *.fai
@@ -22,20 +24,23 @@
 *.bed
 *.bigWig
 
-# R and Python temporary files
-.Rhistory
-.RData
+# Python and R temporary files
 __pycache__/
 *.pyc
 .ipynb_checkpoints/
+.Rhistory
+.RData
 
-# Environment directories
+# Virtual environments
 .venv/
 venv/
 conda_env/
 
-# macOS
+# macOS metadata
 .DS_Store
+._*
 
-# Logs
+# Temporary and log files
+*.tmp
 *.log
+EOF

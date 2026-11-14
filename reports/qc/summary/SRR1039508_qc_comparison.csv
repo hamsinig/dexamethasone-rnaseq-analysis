@@ -1,0 +1,49 @@
+Read,Metric,Raw,Trimmed,Change (Trimmed - Raw),Unit
+R1,Deduplicated percentage,49.7041441816729,49.388436565089386,-0.3157076165835164,%
+R1,Final-base mean quality,33.86874568927386,34.63020366570067,0.7614579764268115,Phred
+R1,GC content,50,49,-1.0,%
+R1,Maximum adapter content: Illumina Small RNA 3' Adapter,0.0002659630012328911,0.0002457093125057986,-2.025368872709247e-05,%
+R1,Maximum adapter content: Illumina Small RNA 5' Adapter,0.0,0.0,0.0,%
+R1,Maximum adapter content: Illumina Universal Adapter,0.2046301891289062,0.0017882177743477566,-0.20284197135455845,%
+R1,Maximum adapter content: Nextera Transposase Sequence,0.00021800246002695993,0.0002229584502367432,4.955990209783265e-06,%
+R1,Maximum adapter content: PolyA,0.4791563269916563,0.24101353453346558,-0.2381427924581907,%
+R1,Maximum adapter content: PolyG,0.02077563444056928,0.0018473700162473007,-0.01892826442432198,%
+R1,Maximum per-base N content,0.3266723263011989,0.024752938148732303,-0.3019193881524666,%
+R1,Mean per-base median quality,39.65079365079365,39.682539682539684,0.03174603174603163,Phred
+R1,Mean per-base quality,38.238552154641745,38.67759511334983,0.43904295870808596,Phred
+R1,Minimum per-base mean quality,33.86874568927386,34.63020366570067,0.7614579764268115,Phred
+R1,Position of maximum N content,22,20,-2.0,base position
+R1,Position of maximum adapter: Illumina Small RNA 3' Adapter,51,51,0.0,base position
+R1,Position of maximum adapter: Illumina Small RNA 5' Adapter,1,1,0.0,base position
+R1,Position of maximum adapter: Illumina Universal Adapter,52,43,-9.0,base position
+R1,Position of maximum adapter: Nextera Transposase Sequence,52,52,0.0,base position
+R1,Position of maximum adapter: PolyA,52,52,0.0,base position
+R1,Position of maximum adapter: PolyG,52,52,0.0,base position
+R1,Positions with mean Q30 or higher,63,63,0.0,positions
+R1,Read length,63,30-63,NA,bp
+R1,Total sequences,22935521,21977189,-958332.0,reads
+R1,Weighted mean GC,50.01781431759102,49.913626971317385,-0.10418734627363335,%
+R2,Deduplicated percentage,52.06080434189513,51.506887181438344,-0.5539171604567841,%
+R2,Final-base mean quality,33.86958573995332,34.76735249459648,0.8977667546431576,Phred
+R2,GC content,50,49,-1.0,%
+R2,Maximum adapter content: Illumina Small RNA 3' Adapter,0.0002616029520323519,0.0002457093125057986,-1.58936395265533e-05,%
+R2,Maximum adapter content: Illumina Small RNA 5' Adapter,4.360049200539199e-06,4.550172453811086e-06,1.9012325327188705e-07,%
+R2,Maximum adapter content: Illumina Universal Adapter,0.20815746893214243,0.04221194985400544,-0.16594551907813698,%
+R2,Maximum adapter content: Nextera Transposase Sequence,0.00016568186962048954,0.00016835638079101017,2.674511170520634e-06,%
+R2,Maximum adapter content: PolyA,0.6066441656154224,0.33243559947543794,-0.2742085661399845,%
+R2,Maximum adapter content: PolyG,0.03741358218982686,0.0016608129456410462,-0.035752769244185814,%
+R2,Maximum per-base N content,10.683690159033231,10.610547145042071,-0.07314301399116019,%
+R2,Mean per-base median quality,39.73015873015873,39.76190476190476,0.03174603174603163,Phred
+R2,Mean per-base quality,38.04002935287549,38.60547321343452,0.5654438605590286,Phred
+R2,Minimum per-base mean quality,33.86958573995332,34.42038265221271,0.5507969122593863,Phred
+R2,Position of maximum N content,9,9,0.0,base position
+R2,Position of maximum adapter: Illumina Small RNA 3' Adapter,52,52,0.0,base position
+R2,Position of maximum adapter: Illumina Small RNA 5' Adapter,50,50,0.0,base position
+R2,Position of maximum adapter: Illumina Universal Adapter,52,52,0.0,base position
+R2,Position of maximum adapter: Nextera Transposase Sequence,52,52,0.0,base position
+R2,Position of maximum adapter: PolyA,52,52,0.0,base position
+R2,Position of maximum adapter: PolyG,52,52,0.0,base position
+R2,Positions with mean Q30 or higher,63,63,0.0,positions
+R2,Read length,63,31-63,NA,bp
+R2,Total sequences,22935521,21977189,-958332.0,reads
+R2,Weighted mean GC,49.92019992383289,49.816868701346166,-0.1033312224867231,%

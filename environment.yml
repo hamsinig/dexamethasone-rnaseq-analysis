@@ -13,3 +13,5 @@ dependencies:
   - subread
   - samtools
   - multiqc
+  - pandas
+  - matplotlib

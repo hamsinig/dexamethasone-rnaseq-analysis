@@ -1,0 +1,24 @@
+Metric,Value
+Fastp version,1.4.0
+Sequencing layout,paired end (63 cycles + 63 cycles)
+Total reads before filtering,45871042
+Total reads after filtering,43954378
+Total bases before filtering,2889875646
+Total bases after filtering,2766453310
+Q20 rate before (%),98.08
+Q20 rate after (%),99.2301
+Q30 rate before (%),96.0525
+Q30 rate after (%),97.5851
+Mean read 1 length before (bp),63
+Mean read 1 length after (bp),62
+Mean read 2 length before (bp),63
+Mean read 2 length after (bp),62
+GC content before (%),49.9768
+GC content after (%),49.8635
+Reads passed filtering,43954378
+Reads failed filtering,1916664
+Reads with adapter trimmed,260067
+Bases trimmed due to adapters,4488299
+Duplication rate (%),7.0689
+Insert size peak (bp),95
+Read retention (%),95.82162532954887
